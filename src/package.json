@@ -1,0 +1,33 @@
+{
+  "name": "my-film-revolution",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .js,.jsx",
+    "format": "prettier --write .",
+    "deploy": "gh-pages -d dist",
+    "gen:sitemap": "node scripts/generate-sitemap.js",
+    "generate-module": "node scripts/generate-module.js",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.3",
+    "vite": "^4.4.9",
+    "vite-plugin-pwa": "^0.16.0",
+    "eslint": "^8.30.0",
+    "prettier": "^3.2.4"
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0",
+    "@vitejs/plugin-react": "^3.0.0",
+    "@storybook/react": "^7.0.25",
+    "@storybook/addon-links": "^7.0.25",
+    "@storybook/addon-essentials": "^7.0.25"
+  }
+}
