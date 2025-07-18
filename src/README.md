@@ -7,14 +7,19 @@ Plataforma educacional gratuita de filmmaking, design gráfico, motion design e 
 - React
 - Vite
 - TailwindCSS
-- PWA Ready
-- i18n (pt-BR, en-US, es-419)
-- GitHub Actions CI/CD
+- PWA
+- i18n
+- GitHub Actions
 - Lint + Format
-- Service Worker + Cache
-- Sitemap + Meta Tags
+- Service Worker
+- Sitemap
+- Design System
+- Storybook
+- Testes
+- Estrutura modular
 
-## 🛠 Instalação
+## 🧪 Desenvolvimento
 
 ```bash
 npm install
+npm run dev
