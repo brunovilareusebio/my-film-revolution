@@ -1,29 +1,35 @@
 {
   "name": "my-film-revolution",
   "homepage": "https://brunovilareusebio.github.io/my-film-revolution/",
+  "version": "1.0.0",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint . --ext .js,.jsx",
+    "format": "prettier --write .",
+    "deploy": "gh-pages -d dist",
+    "gen:sitemap": "node scripts/generate-sitemap.js",
+    "generate-module": "node scripts/generate-module.js",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.3",
+    "vite": "^4.4.9",
+    "vite-plugin-pwa": "^0.16.0",
+    "eslint": "^8.30.0",
+    "prettier": "^3.2.4"
   },
   "devDependencies": {
-    "@eslint/js": "^9.30.1",
-    "@types/react": "^19.1.8",
-    "@types/react-dom": "^19.1.6",
-    "@vitejs/plugin-react": "^4.6.0",
-    "eslint": "^9.30.1",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.20",
-    "globals": "^16.3.0",
-    "vite": "^7.0.4"
+    "gh-pages": "^4.0.0",
+    "@vitejs/plugin-react": "^3.0.0",
+    "@storybook/react": "^7.0.25",
+    "@storybook/addon-links": "^7.0.25",
+    "@storybook/addon-essentials": "^7.0.25"
   }
 }
 
