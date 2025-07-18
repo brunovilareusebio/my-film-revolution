@@ -1,7 +1,7 @@
 // scripts/pages-list.js
 exports.pages = [
   { path: "/", priority: "1.0" },
-  { path: "/modulos", priority: "0.9" },
+const { pages } = require("./pages-list");
   { path: "/modulo/1", priority: "0.8" },
   { path: "/modulo/2", priority: "0.8" },
   { path: "/modulo/3", priority: "0.8" },
