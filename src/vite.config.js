@@ -25,10 +25,10 @@ export default defineConfig({
           { src: "icons/icon-512.png", sizes: "512x512", type: "image/png" }
         ]
       }
-    },
-    base: "/my-film-revolution/",
-    build: {
-      outDir: "dist"
-    }
-  })
+    })
+  ],
+  base: "/my-film-revolution/", // 🔥 IMPORTANTE PARA DEPLOY NO GITHUB
+  build: {
+    outDir: "dist"
+  }
 });
