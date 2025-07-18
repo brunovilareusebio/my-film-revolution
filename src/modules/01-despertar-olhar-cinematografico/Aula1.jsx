@@ -5,7 +5,7 @@ const Aula1 = () => {
     <section>
       <h2 className="text-xl font-semibold text-amber-400 mb-2">Aula 1: Autorretrato Cinematográfico</h2>
       <p className="mb-4">
-        Nesta aula, você vai aprender a se expressar através da câmera como instrumento de autorretrato.
+        Nesta aula, você vai aprender a se expressar através da câmera como um instrumento de autorretrato.
       </p>
       <div className="bg-gray-800 p-4 rounded-lg">
         <h3 className="font-semibold">Exercício:</h3>
