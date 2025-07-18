@@ -1,6 +1,6 @@
 {
   "name": "my-film-revolution",
-  "homepage": "https://brunovilareusebio.github.io/my-film-revolution/",
+  "homepage": "https://brunovilareusebio.github.io/my-film-revolution/ ",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -31,6 +31,4 @@
     "@storybook/addon-links": "^7.0.25",
     "@storybook/addon-essentials": "^7.0.25"
   }
-}
-
 }
