@@ -1,7 +1,12 @@
 {
-  "home.title": "Welcome to My Film Revolution",
-  "header.menu.modules": "Modules",
-  "header.menu.library": "Library",
-  "footer.about": "About",
-  "footer.contact": "Contact"
+  "hero": {
+    "title": "My Film Revolution"
+  },
+  "navigation": {
+    "home": "Home",
+    "modules": "Modules",
+    "library": "Library",
+    "community": "Community",
+    "culture": "Culture"
+  }
 }
