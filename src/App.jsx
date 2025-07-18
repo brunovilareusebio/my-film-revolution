@@ -1,35 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import ModuloPage from "./pages/ModuloPage";
+import BibliotecaPage from "./pages/BibliotecaPage";
+import FilmeDetailPage from "./pages/FilmeDetailPage";
+import ComunidadePage from "./pages/ComunidadePage";
+import CulturaPage from "./pages/CulturaPage";
+import SobrePage from "./pages/SobrePage";
+import RecursosPage from "./pages/RecursosPage";
+import ProjetoPage from "./pages/ProjetoPage";
+import ManifestoPage from "./pages/ManifestoPage";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div className="bg-dark text-light min-h-screen flex flex-col">
+      <Header />
+      <main className="flex-grow container mx-auto px-4 py-8">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/modulos" element={<ModuloPage />} />
+          <Route path="/modulos/:slug" element={<ModuloPage />} />
+          <Route path="/biblioteca" element={<BibliotecaPage />} />
+          <Route path="/biblioteca/filmes/:id" element={<FilmeDetailPage />} />
+          <Route path="/comunidade" element={<ComunidadePage />} />
+          <Route path="/cultura" element={<CulturaPage />} />
+          <Route path="/sobre" element={<SobrePage />} />
+          <Route path="/recursos" element={<RecursosPage />} />
+          <Route path="/projeto/:id" element={<ProjetoPage />} />
+          <Route path="/manifesto" element={<ManifestoPage />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
+  );
+};
 
-export default App
+export default App;
