@@ -11,4 +11,4 @@ const FilmeCard = ({ filme }) => {
   );
 };
 
-export default FilmeCard;.jsx
+export default FilmeCard;
