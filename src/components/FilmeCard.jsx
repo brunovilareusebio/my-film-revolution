@@ -1,13 +1,40 @@
+// src/components/FilmeCard.jsx
 import React from "react";
-import { Link } from "react-router-dom";
 
 const FilmeCard = ({ filme }) => {
+  if (!filme) return null;
+
   return (
-    <Link to={`/biblioteca/filmes/${filme.id}`} className="bg-gray-800 p-4 rounded-lg shadow hover:shadow-amber-500/10 transition">
-      <img src={filme.thumbnail_url} alt={filme.title} className="w-full h-48 object-cover rounded" />
-      <h3 className="mt-2 text-lg font-semibold text-amber-500">{filme.title}</h3>
-      <p className="text-sm text-gray-400">{filme.year} - {filme.director}</p>
-    </Link>
+    <div className="bg-white rounded-lg shadow p-4 flex flex-col gap-2">
+      <div className="aspect-video w-full overflow-hidden rounded-md bg-black/10">
+        {filme.thumbnail && (
+            <img
+              src={filme.thumbnail}
+              alt={filme.titulo}
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+            />
+        )}
+      </div>
+      <h3 className="text-lg font-semibold text-gray-900">{filme.titulo}</h3>
+      {filme.ano && (
+        <p className="text-xs uppercase tracking-wide text-gray-500">
+          {filme.ano} • {filme.pais || "Desconhecido"}
+        </p>
+      )}
+      {filme.sinopse && (
+        <p className="text-sm text-gray-600 line-clamp-3">
+          {filme.sinopse}
+        </p>
+      )}
+      <div className="mt-auto">
+        <button
+          className="text-sm font-medium text-blue-600 hover:underline"
+          onClick={() => console.log("Abrir filme:", filme.slug)}
+        >
+          Ver detalhes
+        </button>
+      </div>
+    </div>
   );
 };
 
