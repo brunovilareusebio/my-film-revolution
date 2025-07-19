@@ -9,4 +9,4 @@ const ModuleCard = ({ module }) => {
   );
 };
 
-export default ModuleCard;
+import Modulecard from "../components/ModuleCard";
